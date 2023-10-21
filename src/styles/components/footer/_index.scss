@@ -1,0 +1,52 @@
+@use 'sass:map';
+@use '../../variables/breakpoints';
+
+.footer {
+  --_footer-background-color: var(
+    --footer-background-color,
+    var(--very-dark-cyan)
+  );
+  --_footer-font-color: var(--footer-font-color, var(--white));
+
+  display: block;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 10em;
+    background-image: url('../images/bg-footer-top-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+      & {
+        background-image: url('../images/bg-footer-top-desktop.svg');
+      }
+    }
+  }
+}
+
+.footer__content-wrapper {
+  display: block;
+  padding: 2em;
+  background-color: var(--_footer-background-color);
+  color: var(--_footer-font-color);
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      display: grid;
+      grid-template-columns: minmax(auto, 1fr) minmax(auto, 2fr);
+      gap: 4em;
+    }
+  }
+}
+
+.footer__content-1 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.footer__content-2 {
+  grid-row: 1;
+  grid-column: 1;
+}

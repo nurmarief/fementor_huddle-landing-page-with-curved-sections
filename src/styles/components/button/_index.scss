@@ -1,0 +1,62 @@
+.button {
+  --_button-font-size: var(--button-font-size, inherit);
+  --_button-font-color: var(--button-font-color, inherit);
+  --_button-border-radius: var(--button-border-radius, 0.5em);
+  --_button-border-color: var(--button-border-color, var(--very-dark-cyan));
+  --_button-padding: var(--button-padding, 0.5em 1.5em);
+  --_button-background-color: var(--button-background-color, inherit);
+
+  font-size: var(--_button-font-size);
+  color: var(--_button-font-color);
+  display: inline-block;
+  border: 0.1em solid var(--_button-border-color);
+  border-radius: var(--_button-border-radius);
+  padding: var(--_button-padding);
+  height: fit-content;
+  background-color: var(--_button-background-color);
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+//---BLOCK MODIFIER---
+// Block modifier: color
+.button_color_pink {
+  --button-border-color: var(--pink);
+  --button-font-color: var(--white);
+  --button-background-color: var(--pink);
+}
+
+.button_color_pink-outline {
+  --button-border-color: var(--pink);
+  --button-font-color: var(--pink);
+}
+
+.button_color_white {
+  --button-border-color: var(--white);
+  --button-font-color: var(--white);
+  --button-background-color: var(--white);
+}
+
+// Block modifier: size
+.button_size_extra-small {
+  --button-font-size: clamp(0.8em, calc(0.9vw + 0.1em), 1em);
+  --button-padding: 0.3em 0.6em;
+}
+
+.button_size_small {
+  --button-font-size: clamp(0.8em, calc(0.9vw + 0.1em), 1em);
+  --button-padding: 0.5em 1.5em;
+}
+
+.button_size_large {
+  --button-font-size: font-size: clamp(1.1em, calc(1.2vw + 0.1em), 1.3em);
+  --button-padding: 1em 3em;
+}
+
+// Block modifier: border-radius
+.button_border-radius_pill {
+  --button-border-radius: 999em;
+}

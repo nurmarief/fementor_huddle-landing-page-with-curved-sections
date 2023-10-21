@@ -1,0 +1,17 @@
+.form {
+  --_form-padding: var(--form-padding, 1em);
+
+  display: block;
+  margin-block: 2em;
+  padding: var(--_form-padding);
+}
+
+// ---BLOCK MODIFIERS---
+.form_no-padding {
+  --form-padding: 0;
+}
+
+.form__submit-button {
+  display: block;
+  margin-left: auto;
+}

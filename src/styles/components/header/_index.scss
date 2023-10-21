@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../../variables/breakpoints';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.header__logo {
+  width: 8rem;
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+    width: 16rem;
+  }
+}

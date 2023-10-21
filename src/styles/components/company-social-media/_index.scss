@@ -1,0 +1,28 @@
+.company-social-media {
+  display: block;
+  margin-block: 4em;
+}
+
+.company-social-media__link-to-social-media-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+  margin-block: 2em;
+}
+
+.company-social-media__social-media-button {
+  &:hover {
+    background-color: var(--very-dark-cyan) !important;
+  }
+
+  &:hover .company-social-media__social-media-icon {
+    color: var(--very-pale-blue);
+  }
+}
+
+.company-social-media__social-media-icon {
+  color: var(--very-dark-cyan);
+  transition: all 0.3s;
+}

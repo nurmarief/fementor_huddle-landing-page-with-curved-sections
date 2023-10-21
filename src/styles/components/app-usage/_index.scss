@@ -1,0 +1,14 @@
+.app-usage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+}
+
+.app-usage__stat-number {
+  font-size: clamp(4.5em, calc(4.8vw + 0.1em), 5em);
+  font-weight: 700;
+  display: block;
+}

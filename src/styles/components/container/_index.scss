@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use '../../variables/breakpoints';
+
+.container {
+  display: block;
+  width: 100%;
+}
+
+//---BLOCK-MODIFIERS---
+
+// Block modifiers: size
+.container_size_small {
+  width: 100%;
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'mobile')) {
+    width: 90%;
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'mobile-lg')) {
+    margin-inline: auto;
+    width: 80%;
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet-lg')) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'desktop')) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'desktop-lg')) {
+    width: 40%;
+  }
+}

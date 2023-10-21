@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '../../variables/breakpoints';
+
+.newsletter-signup {
+  display: block;
+}
+
+.newsletter-signup__signup-form {
+  display: block;
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      display: flex;
+      align-items: start;
+      gap: 3rem;
+    }
+  }
+}
